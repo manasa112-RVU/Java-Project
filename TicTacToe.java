@@ -74,20 +74,17 @@ currentPlayer = player1Symbol;
     }
 
     // Print the grid to the console
-    private static void printGrid() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(grid[i][j]);
-                if (j < 2) {
-                    System.out.print("|");
-                }
-            }
-            System.out.println();
-            if (i < 2) {
-                System.out.println("-+-+-");
-            }
+     private static void printGrid() {
+    System.out.println("+---+---+---+");
+    for (int i = 0; i < 3; i++) {
+        System.out.print("|");
+        for (int j = 0; j < 3; j++) {
+            System.out.print(" " + grid[i][j] + " |");
         }
+        System.out.println();
+        System.out.println("+---+---+---+");
     }
+}
 
     // Check if the game is over (i.e. someone has won or there are no more empty spaces)
     private static boolean isGameOver() {
